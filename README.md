@@ -5,7 +5,7 @@ Welcome to the Image Editor - your go-to tool for unleashing your creativity and
 
 Overview
 
-The Image Editor is a feature-rich application designed to make photo editing a breeze. Whether you're a photography enthusiast or a casual user, our intuitive interface and powerful editing tools cater to your needs. With the ability to crop, rotate, adjust colors, and more, the Image Editor puts the power of professional photo editing in the palm of your hands.
+The Image Editor is a feature-rich application designed to make photo editing a breeze. Whether you're a photography enthusiast or a casual user, our intuitive interface and powerful editing tools cater to your needs the Image Editor puts the power of professional photo editing in the palm of your hands.
 
 Features
 
