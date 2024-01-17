@@ -14,4 +14,4 @@ Intuitive User Interface: A user-friendly design ensures a seamless and enjoyabl
 Undo/Redo Functionality: Experiment fearlessly with the ability to undo or redo any step in your editing process.
 ImageEditor(image:"filepath");
 
-![simulator_screenshot_5D111A3D-C2A4-4489-AF36-8C7E2A185D1B.png](..%2F..%2F..%2F..%2Fvar%2Ffolders%2Fkr%2Fgx2xp2vn32x7mrn0v_zgqhcc0000gp%2FT%2Fsimulator_screenshot_5D111A3D-C2A4-4489-AF36-8C7E2A185D1B.png)
+![Simulator Screenshot - iPhone 15 Pro - 2024-01-17 at 11 12 06](https://github.com/Aruljebaraj/aj_image_editor/assets/34904782/7a2d4675-ee2c-4700-a7d8-b2894dbd7863)
