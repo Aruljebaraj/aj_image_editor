@@ -1,3 +1,7 @@
+[![pub package](https://img.shields.io/pub/v/image_painter.svg)](https://pub.dev/packages/aj_image_editor)
+![style: effective dart](https://img.shields.io/badge/style-effective_dart-40c4ff.svg)
+[![Platform Badge](https://img.shields.io/badge/platform-android%20|%20ios%20-green.svg)](https://pub.dev/packages/aj_image_editor)
+
 
 Image Editor
 
