@@ -1,13 +1,17 @@
 name: aj_image_editor
 description: "the editor features a range of shapes that can be easily inserted into images, providing a quick and convenient method to integrate geometric elements"
-version: 0.0.1
+version: 0.0.5
 homepage: https://github.com/Aruljebaraj/aj_image_editor
 
 environment:
   sdk: '>=3.2.3 <4.0.0'
   flutter: ">=1.17.0"
 
+
 dependencies:
+
+  convert_widget_to_image: ^0.0.2
+  path_provider: ^2.1.2
   flutter:
     sdk: flutter
 
@@ -15,6 +19,7 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^2.0.0
+
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
