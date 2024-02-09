@@ -1,3 +1,6 @@
+import 'dart:io';
+import 'dart:typed_data';
+
 import 'package:flutter/material.dart';
 import 'Enum/shape_type.dart';
 import 'Models/models.dart';
@@ -5,11 +8,14 @@ import 'Util/drawing_painter.dart';
 import 'Util/shape.dart';
 import 'Util/text_overlay.dart';
 import 'Util/triangle_painter.dart';
+import 'package:convert_widget_to_image/widget_to_image.dart';
+import 'package:path_provider/path_provider.dart';
 
 class ImageEditor extends StatefulWidget {
   final image;
+  final Function(String) onSave;
 
-  const ImageEditor({Key? key, this.image})
+  const ImageEditor({Key? key, this.image, required this.onSave})
       : super(key: key);
 
   @override
@@ -49,21 +55,34 @@ class _ImageEditorScreenState extends State<ImageEditor> {
   ];
   var undo = <Models>[];
   var redo = <Models>[];
-  var editedText="";
+  var editedText = "";
+  GlobalKey key = GlobalKey();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Image Editor'),
-      ),
-      body: Stack(
-        children: [
-          _buildImage(),
-          _buildDrawingCanvas(),
-          _buildShapes(),
-          _buildTextOverlays(),
+        actions: [
+          IconButton(
+              onPressed: () async {
+                var byte = await WidgetToImage.asByteData(key);
+                var filePath = await writeToFile(byte);
+                widget.onSave(filePath);
+              },
+              icon: const Icon(Icons.save))
         ],
+      ),
+      body: RepaintBoundary(
+        key: key,
+        child: Stack(
+          children: [
+            _buildImage(),
+            _buildDrawingCanvas(),
+            _buildShapes(),
+            _buildTextOverlays(),
+          ],
+        ),
       ),
       bottomNavigationBar: BottomAppBar(
         child: Row(
@@ -665,5 +684,13 @@ class _ImageEditorScreenState extends State<ImageEditor> {
           Models(value: shape, type: "ShapeCanvas", color: _selectedColor));
       _shapes.add(shape);
     });
+  }
+
+  writeToFile(ByteData data) async {
+    final buffer = data.buffer;
+    var tempDir = await getApplicationDocumentsDirectory();
+    String fullPath = "${tempDir.path}/Inspections/${DateTime.now()}.png";
+    return File(fullPath).writeAsBytes(
+        buffer.asUint8List(data.offsetInBytes, data.lengthInBytes));
   }
 }
