@@ -1,5 +1,5 @@
-
 import 'package:flutter/material.dart';
+
 class Models {
   String? type;
   dynamic value;

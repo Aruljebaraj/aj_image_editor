@@ -1,5 +1,5 @@
-
 import 'package:flutter/material.dart';
+
 class TextOverlay {
   double left;
   double top;
@@ -8,7 +8,7 @@ class TextOverlay {
 
   TextOverlay(
       {required this.left,
-        required this.top,
-        required this.text,
-        required this.color});
+      required this.top,
+      required this.text,
+      required this.color});
 }

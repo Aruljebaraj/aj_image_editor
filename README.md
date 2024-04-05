@@ -1,39 +1,25 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages).
+Image Editor
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages).
--->
+Welcome to the Image Editor - your go-to tool for unleashing your creativity and enhancing your photos effortlessly!
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+Overview
 
-## Features
+The Image Editor is a feature-rich application designed to make photo editing a breeze. Whether you're a photography enthusiast or a casual user, our intuitive interface and powerful editing tools cater to your needs. With the ability to crop, rotate, adjust colors, and more, the Image Editor puts the power of professional photo editing in the palm of your hands.
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+Features
 
-## Getting started
+Basic Editing Tools:  fine-tune your images to perfection.
+Intuitive User Interface: A user-friendly design ensures a seamless and enjoyable editing experience.
+Undo/Redo Functionality: Experiment fearlessly with the ability to undo or redo any step in your editing process.
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+example :
+provide Image file 
 
-## Usage
+ImageEditor(image:"filepath",onSave(String val){});
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+Share an image file using the ImageEditor function. 
+When the Save button is clicked, the image will be stored, and you can handle the saved file through the onSave callback with the provided value.
 
-```dart
-const like = 'sample';
-```
-
-## Additional information
-
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+![simulator_screenshot_5D111A3D-C2A4-4489-AF36-8C7E2A185D1B.png](..%2F..%2F..%2F..%2Fvar%2Ffolders%2Fkr%2Fgx2xp2vn32x7mrn0v_zgqhcc0000gp%2FT%2Fsimulator_screenshot_5D111A3D-C2A4-4489-AF36-8C7E2A185D1B.png)![Simulator Screenshot - iPhone 15 Pro - 2024-01-17 at 11.12.14.png](..%2F..%2FDesktop%2FSimulator%20Screenshot%20-%20iPhone%2015%20Pro%20-%202024-01-17%20at%2011.12.14.png)
+![Simulator Screenshot - iPhone 15 Pro - 2024-01-17 at 11.12.14.png](..%2F..%2FDesktop%2FSimulator%20Screenshot%20-%20iPhone%2015%20Pro%20-%202024-01-17%20at%2011.12.14.png)
