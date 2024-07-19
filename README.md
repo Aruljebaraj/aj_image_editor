@@ -20,6 +20,6 @@ ImageEditor(image:"filepath",onSave(String val){});
 
 Share an image file using the ImageEditor function. 
 When the Save button is clicked, the image will be stored, and you can handle the saved file through the onSave callback with the provided value.
-![Simulator Screenshot - iPhone 15 Pro - 2024-07-19 at 11 01 43](https://github.com/user-attachments/assets/48eea232-a341-4430-a153-b4d975dee7ed)
-![Simulator Screenshot - iPhone 15 Pro - 2024-07-19 at 11 01 47](https://github.com/user-attachments/assets/93fce8f7-160f-4974-96fe-4abcfd0f781d)
-![Simulator Screenshot - iPhone 15 Pro - 2024-07-19 at 11 01 51](https://github.com/user-attachments/assets/ab457e9a-c29b-41f9-a72f-3e5d91f612f2)
+![Simulator Screenshot - iPhone 15 Pro - 2024-07-19 at 11 03 08](https://github.com/user-attachments/assets/9348a9ed-5cb7-4393-87a0-3b008283630a)
+![Simulator Screenshot - iPhone 15 Pro - 2024-07-19 at 11 03 11](https://github.com/user-attachments/assets/49378f10-4f62-4c91-ae5b-f4be4797c952)
+![Simulator Screenshot - iPhone 15 Pro - 2024-07-19 at 11 03 14](https://github.com/user-attachments/assets/22e88667-155f-4bc3-9e00-8a19e153f0f1)
