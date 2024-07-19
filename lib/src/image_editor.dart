@@ -1,6 +1,6 @@
 import 'dart:io';
 import 'dart:typed_data';
-
+import 'package:aj_image_editor/src/Enum/ImageType.dart';
 import 'package:flutter/material.dart';
 import 'Enum/shape_type.dart';
 import 'Models/models.dart';
@@ -12,10 +12,15 @@ import 'package:convert_widget_to_image/widget_to_image.dart';
 import 'package:path_provider/path_provider.dart';
 
 class ImageEditor extends StatefulWidget {
-  final image;
+  final String imagePathOrUrl;
   final Function(String) onSave;
+  final ImageType imageType;
 
-  const ImageEditor({Key? key, this.image, required this.onSave})
+  const ImageEditor(
+      {Key? key,
+      required this.imagePathOrUrl,
+      required this.onSave,
+      required this.imageType})
       : super(key: key);
 
   @override
@@ -67,8 +72,8 @@ class _ImageEditorScreenState extends State<ImageEditor> {
           IconButton(
               onPressed: () async {
                 var byte = await WidgetToImage.asByteData(key);
-                var filePath = await writeToFile(byte);
-                widget.onSave(filePath);
+                File file = await writeToFile(byte);
+                widget.onSave(file.path);
               },
               icon: const Icon(Icons.save))
         ],
@@ -142,16 +147,20 @@ class _ImageEditorScreenState extends State<ImageEditor> {
 
   Widget _buildImage() {
     return Container(
-      width: double.infinity, // Adjust the width of the image container
-      height: double.infinity, // Adjust the width of the image container
+      width: double.infinity,
+      height: double.infinity,
       decoration: BoxDecoration(
         border: Border.all(color: Colors.black, width: 2.0),
       ),
-      // Replace the AssetImage with your desired image
-      child: Image.file(
-        widget.image,
-        fit: BoxFit.contain, // Choose the appropriate fit for your image
-      ),
+      child: widget.imageType == ImageType.file
+          ? Image.file(
+              File(widget.imagePathOrUrl),
+              fit: BoxFit.contain,
+            )
+          : Image.network(
+              widget.imagePathOrUrl,
+              fit: BoxFit.contain,
+            ),
     );
   }
 
