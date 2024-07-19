@@ -1,6 +1,6 @@
 import 'dart:io';
 import 'dart:typed_data';
-import 'package:aj_image_editor/src/Enum/ImageType.dart';
+import 'package:aj_image_editor/src/Enum/image_type.dart';
 import 'package:flutter/material.dart';
 import 'Enum/shape_type.dart';
 import 'Models/models.dart';
@@ -22,9 +22,8 @@ class ImageEditor extends StatefulWidget {
       required this.onSave,
       required this.imageType})
       : super(key: key);
-
   @override
-  _ImageEditorScreenState createState() => _ImageEditorScreenState();
+  State<ImageEditor> createState() => _ImageEditorScreenState();
 }
 
 class _ImageEditorScreenState extends State<ImageEditor> {

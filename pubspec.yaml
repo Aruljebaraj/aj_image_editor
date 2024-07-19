@@ -1,6 +1,6 @@
 name: aj_image_editor
 description: "the editor features a range of shapes that can be easily inserted into images, providing a quick and convenient method to integrate geometric elements"
-version: 0.0.5
+version: 0.0.7
 homepage: https://github.com/Aruljebaraj/aj_image_editor
 
 environment:
