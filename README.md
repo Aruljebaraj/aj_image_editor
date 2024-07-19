@@ -15,6 +15,34 @@ Undo/Redo Functionality: Experiment fearlessly with the ability to undo or redo 
 
 example :
 provide Image file 
+# Examples
+
+### Quick Example
+
+```dart
+void main() {
+  runApp(const MaterialApp(
+    debugShowCheckedModeBanner: false,
+    home: AjEditor(),
+  ));
+}
+
+class AjEditor extends StatelessWidget {
+  const AjEditor({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return ImageEditor(
+      onSave: (path) {
+        log(path);
+      },
+      imagePathOrUrl:
+      'https://images.pexels.com/photos/1103971/pexels-photo-1103971.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      imageType: ImageType.network,
+    );
+  }
+}
+```
 
 
 <img src="https://private-user-images.githubusercontent.com/34904782/350250623-9348a9ed-5cb7-4393-87a0-3b008283630a.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MjEzNjgwNzIsIm5iZiI6MTcyMTM2Nzc3MiwicGF0aCI6Ii8zNDkwNDc4Mi8zNTAyNTA2MjMtOTM0OGE5ZWQtNWNiNy00MzkzLTg3YTAtM2IwMDgyODM2MzBhLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA3MTklMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNzE5VDA1NDI1MlomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWIzZjVkMTQ1M2U2N2RiYjVjODBiMjRmZDYyYzVjOTAzMjUzYmIxNjYyYmQxYzRkZTRkNTNiMmI5YjFkNGQ3ODEmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.He1iodYRFpy0uzeeAXvHZgdOgsSvVPRmMhpQLjopLKI" alt="How example looks" width="300" height="540">
