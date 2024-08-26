@@ -1,7 +1,7 @@
 ## 0.0.5
 
 * TODO:  initial release.
-* Image Editor Initial Release Notes - Version 1.0.0
+* Image Editor Initial Release Notes - Version 0.0.10
   We are thrilled to announce the initial release of our Image Editor! This powerful tool allows you
   to unleash your creativity and elevate your photos with a range of editing features.
   Key Features
